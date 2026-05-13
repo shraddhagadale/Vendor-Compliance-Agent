@@ -1,0 +1,113 @@
+INTERNALCO LTD. — VENDOR SLA POLICY
+Document ID: POL-VMO-SLA-001
+Version: 2.1
+Effective Date: January 1, 2025
+Owner: Vendor Management Office (VMO)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. PURPOSE
+
+This policy defines InternalCo Ltd.'s ("Company") minimum service level standards that all vendors must meet during the term of any active contract with the Company. It provides definitions for uptime requirements, response time tiers, breach classifications, and remedies.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. SCOPE
+
+This policy applies to all third-party vendors providing software, infrastructure, managed services, or data processing services to InternalCo Ltd. under an active Master Service Agreement (MSA) or Statement of Work (SOW).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. UPTIME REQUIREMENTS
+
+3.1 Minimum Uptime Commitment
+All vendors must maintain a monthly Service Availability of not less than 99.5% ("Uptime Requirement"), measured on a calendar-month basis.
+
+Service Availability is calculated as:
+  [(Total Minutes in Month – Unexcused Downtime Minutes) / Total Minutes in Month] × 100
+
+At 99.5%, the maximum permitted unexcused downtime per calendar month is 219 minutes (approximately 3 hours and 39 minutes).
+
+3.2 Measurement
+Service Availability is measured using a combination of vendor-provided monitoring data and Company's independent monitoring tools. In the event of a discrepancy, the parties shall confer within five (5) business days to reconcile. If no agreement is reached within ten (10) business days, an independent third-party measurement tool mutually agreed upon shall be determinative.
+
+3.3 Exclusions from Downtime
+The following shall not count as Unexcused Downtime:
+  (a) Scheduled maintenance windows with at least 72 hours advance written notice to the Company;
+  (b) Downtime caused by force majeure events (natural disasters, widespread internet outages);
+  (c) Downtime directly caused by Company's misconfiguration of Company-controlled systems;
+  (d) Downtime resulting from third-party infrastructure failures entirely outside vendor's control.
+All other downtime is classified as Unexcused Downtime.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. INCIDENT RESPONSE TIME TIERS
+
+All vendors must classify and respond to incidents within the following timeframes:
+
+  Priority Level | Definition                                        | Initial Response | Resolution Target
+  ---------------|---------------------------------------------------|------------------|------------------
+  P1 – Critical  | Complete service outage or confirmed data loss    | 15 minutes       | 4 hours
+  P2 – High      | Major functionality loss with no viable workaround| 1 business hour  | 8 business hours
+  P3 – Medium    | Partial functionality impairment; workaround exists| 4 business hours | 3 business days
+  P4 – Low       | Cosmetic issues, documentation, general inquiries | 1 business day   | 10 business days
+
+Definitions:
+  - "Initial Response" means acknowledgment from a qualified support engineer with an assigned ticket number and preliminary assessment.
+  - "Resolution Target" means restoration of full service operation or delivery of a validated workaround.
+
+4.1 Priority Escalation
+If Company's designated Technical Contact disagrees with a vendor's incident priority classification, Company may escalate the classification within 30 minutes of the vendor's initial response. Vendors may not downgrade a Company-assigned priority without Company's written consent.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. SLA BREACH CLASSIFICATIONS
+
+An "SLA Breach" occurs when a vendor fails to meet any service level metric specified in its MSA or in this policy during the applicable measurement period.
+
+5.1 Breach Tiers
+
+  (a) Minor Breach — Actual performance falls within 5% below the applicable threshold.
+      Example: Uptime of 94.6%–99.49% in a given month.
+
+  (b) Material Breach — Actual performance falls more than 5% below the applicable threshold,
+      OR any single incident results in service unavailability exceeding 8 consecutive hours.
+      Example: Uptime below 94.5%, or a single 9-hour outage.
+
+  (c) Chronic Breach — Three (3) or more SLA Breaches of any classification within any
+      rolling six (6) month period. Chronic Breach entitles Company to initiate contract review
+      proceedings regardless of individual breach severity.
+
+5.2 Uptime SLA Breach Thresholds and Credits
+
+  Monthly Availability     | Service Credit (% of monthly fees)
+  -------------------------|------------------------------------
+  99.00% – 99.49%          | 10%
+  95.00% – 98.99%          | 25%
+  Below 95.00%             | 50%
+
+5.3 Credit Claim Process
+To receive service credits, Company must submit a written credit request to the vendor's billing department within thirty (30) calendar days of the end of the affected month. Vendors must review and respond to all credit requests within ten (10) business days.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. REPEATED SLA BREACHES — ESCALATION
+
+In addition to service credits, the following escalation steps apply when SLA breaches recur:
+
+  Occurrence                         | Company Action
+  -----------------------------------|----------------------------------------------
+  1st breach in any 6-month period   | Written notice; vendor submits RCA within 5 days
+  2nd breach within 6-month period   | Formal dispute initiated under contract Section 12
+  3rd breach (Chronic Breach)        | Contract Review initiated; vendor placed on PIP
+  Unresolved dispute after 14 days   | Escalation to legal and executive leadership
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. POLICY REVIEW
+
+This policy shall be reviewed annually by the Vendor Management Office and updated as necessary to reflect changes in Company's vendor risk posture or regulatory requirements.
+
+Last reviewed: January 1, 2025
+Next review due: January 1, 2026
+Policy Owner: Head of Vendor Management, InternalCo Ltd.

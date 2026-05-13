@@ -1,0 +1,136 @@
+INTERNALCO LTD. — VENDOR COMPLIANCE REQUIREMENTS
+Document ID: POL-VMO-COMP-003
+Version: 1.2
+Effective Date: January 1, 2025
+Owner: Vendor Management Office (VMO) & Information Security Team
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. PURPOSE
+
+This document defines the annual compliance certifications and documentation that all active vendors must maintain and submit to InternalCo Ltd. ("Company") as a condition of continued engagement. Failure to comply with these requirements may result in a Compliance Gap Flag, suspension of services, or termination of the vendor's contract.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. REQUIRED ANNUAL CERTIFICATIONS
+
+All vendors providing software, infrastructure, data processing, or managed services to the Company must submit the following three (3) certifications by April 1 of each calendar year:
+
+  # | Certification                          | Issuing Body                         | Minimum Scope
+  --|----------------------------------------|--------------------------------------|--------------------------------------
+  1 | ISO/IEC 27001:2022 Certificate         | Accredited third-party certifier     | Systems used to deliver services
+  2 | Data Privacy Agreement (DPA)           | Executed with InternalCo Legal       | All processing of Company personal data
+  3 | Annual Security Audit Report           | Independent qualified third-party    | Penetration test + controls review
+
+2.1 ISO/IEC 27001:2022 Certification
+Vendors must hold a valid ISO/IEC 27001:2022 certification issued by an accredited third-party certification body recognized by the International Accreditation Forum (IAF). The certification must:
+  (a) Be current (not lapsed, suspended, or under surveillance audit failure);
+  (b) Cover, at minimum, the information security management systems applicable to the services delivered to the Company;
+  (c) Include the certificate's scope statement and expiration date in the submission.
+
+A SOC 2 Type II report issued within the preceding twelve (12) months may be accepted as equivalent, at the Company's sole discretion and upon written approval from the Information Security Team.
+
+2.2 Data Privacy Agreement (DPA)
+Vendors that process, store, or transmit any Company Personal Data must maintain a current, fully executed Data Processing Agreement with InternalCo Ltd. The DPA must comply with:
+  (a) General Data Protection Regulation (GDPR) — EU 2016/679;
+  (b) California Consumer Privacy Act (CCPA) and CPRA;
+  (c) Any other applicable national or regional data protection laws.
+
+The DPA must include:
+  - Nature, purpose, and legal basis of processing;
+  - Types of personal data and categories of data subjects;
+  - Sub-processor management obligations;
+  - Data subject rights fulfillment procedures;
+  - Data breach notification within 72 hours of discovery;
+  - Data retention, return, and secure deletion obligations.
+
+Vendors must re-execute or re-confirm the DPA annually or whenever there is a material change in the scope of data processing. Submission of the annual DPA confirmation is required by April 1 of each year.
+
+2.3 Annual Security Audit Report
+Vendors must conduct, at their own expense, an annual information security audit by an independent, qualified third-party auditor. The audit must include, at minimum:
+  (a) Penetration testing of all systems used to deliver services to the Company;
+  (b) Review of access control and identity management controls;
+  (c) Assessment of data encryption practices at rest and in transit;
+  (d) Review of incident response procedures and business continuity plans.
+
+Vendors must submit an executive summary of audit findings and their remediation plan for identified vulnerabilities to the Company's Compliance Team within thirty (30) calendar days of audit completion.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. SUBMISSION DEADLINE AND PROCESS
+
+3.1 Annual Certification Deadline
+All required certifications must be submitted to compliance@internalco.com by April 1 of each calendar year.
+
+3.2 Submission Format
+  - ISO 27001 Certificate: PDF copy of current certificate with scope statement
+  - DPA: Executed PDF or DocuSign-confirmed agreement
+  - Security Audit Report: Executive summary PDF (full report may be provided under NDA)
+  - Subject line format: "[Vendor Name] — Annual Compliance Submission [YEAR]"
+
+3.3 New Vendor Initial Submission
+Vendors onboarding mid-year must submit all certifications within thirty (30) calendar days of their contract Effective Date. The next annual submission is due April 1 of the following calendar year.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. GRACE PERIOD
+
+Vendors that have not submitted all required certifications by April 1 shall have a Grace Period of thirty (30) calendar days (until May 1) to complete their submission. Certifications submitted during the Grace Period are not treated as a compliance breach, provided:
+  (a) The vendor notifies the Company's Compliance Team in writing before April 1, explaining the delay; and
+  (b) The vendor provides a confirmed submission date no later than May 1.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. COMPLIANCE GAP FLAG
+
+5.1 Trigger
+A Compliance Gap Flag is raised when a vendor has not submitted one or more required certifications by the end of the Grace Period (May 1). The VMO will raise a flag for each missing certification independently.
+
+5.2 Notification
+Upon raising a Compliance Gap Flag, the VMO shall:
+  (a) Notify the vendor's designated compliance contact and account manager immediately;
+  (b) Notify Company's Compliance Team and Information Security Team;
+  (c) Log the flag in the Vendor Compliance Register with the date, vendor name, and missing certification(s).
+
+5.3 Cure Period
+Following issuance of a Compliance Gap Flag, the vendor has thirty (30) calendar days ("Cure Period") to submit all outstanding certifications. Within ten (10) business days of the flag, the vendor must also provide a written remediation plan confirming their submission timeline.
+
+5.4 Verification
+Upon vendor's notification of submission, the Company's Compliance Team shall verify the submission within fifteen (15) business days. If the submission is incomplete or invalid, a Remediation Rejection Notice shall be issued, and the vendor shall have ten (10) additional business days to resubmit.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. CONSEQUENCES OF NON-COMPLIANCE
+
+  Milestone                                  | Consequence
+  -------------------------------------------|------------------------------------------------------
+  April 1 (Deadline missed)                  | Grace Period begins; vendor notified informally
+  May 1 (Grace Period expired)               | Compliance Gap Flag raised; Cure Period begins
+  May 31 (Cure Period expired, unresolved)   | Contract suspension; access to Company systems revoked
+  After suspension, still unresolved         | Termination for cause; legal escalation
+
+6.1 Contract Suspension
+If the Cure Period expires without verified submission of all outstanding certifications, the Company may immediately suspend the vendor's access to Company systems and withhold payment of fees until compliance is achieved.
+
+6.2 Termination for Cause
+If the vendor remains non-compliant following contract suspension, the Company may terminate the agreement for cause pursuant to the applicable MSA termination clause, without further obligation except for payment of amounts due for services accepted prior to the termination date.
+
+6.3 ISO 27001 Certification Lapse (Special Case)
+If a vendor's ISO 27001 certification lapses or is suspended at any time during the year (not just at annual renewal), the vendor must notify the Company within 48 hours. This constitutes a material breach. The vendor has 60 calendar days to restore certification. The Company may suspend payment during this period.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. CONTACTS
+
+  Role                          | Contact
+  ------------------------------|----------------------------
+  Compliance submissions        | compliance@internalco.com
+  DPA and legal questions       | legal@internalco.com
+  Security audit questions      | infosec@internalco.com
+  Vendor Management Office      | vmo@internalco.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Last reviewed: January 1, 2025
+Next review due: January 1, 2026
+Policy Owner: Head of Vendor Management & CISO, InternalCo Ltd.

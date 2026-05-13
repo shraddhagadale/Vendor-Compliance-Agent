@@ -1,0 +1,113 @@
+MASTER SERVICE AGREEMENT
+Vendor: TechVendor Inc.
+Client: InternalCo Ltd.
+Contract ID: MSA-2025-TECHVENDOR-002
+Effective Date: June 1, 2025
+Expiration Date: May 31, 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 1 — PARTIES
+
+This Master Service Agreement ("Agreement") is entered into as of June 1, 2025 ("Effective Date") by and between InternalCo Ltd., a corporation organized under the laws of Delaware ("Client"), and TechVendor Inc., a corporation organized under the laws of New York ("Vendor").
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 2 — SCOPE OF SERVICES
+
+Vendor shall provide cloud infrastructure management, data pipeline maintenance, and platform security services as described in Exhibit A. Services include:
+  - 24/7 cloud infrastructure monitoring and management
+  - Monthly data pipeline health reports
+  - Quarterly security posture assessments
+  - Annual compliance certification submissions
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 3 — COMPLIANCE CERTIFICATION REQUIREMENTS
+
+3.1 Annual Certification Obligation
+Vendor shall maintain and annually renew the following certifications throughout the term of this Agreement:
+  (a) ISO/IEC 27001:2022 — Information Security Management System certification, issued by an accredited third-party certification body;
+  (b) Data Privacy Agreement ("DPA") — a current, executed DPA with Client as set forth in Exhibit F, covering all processing of Client Personal Data;
+  (c) Annual Security Audit Report — a third-party penetration test and security controls audit covering all systems used to deliver services under this Agreement.
+
+3.2 Annual Submission Deadline
+Vendor shall submit valid, current copies of all certifications listed in Section 3.1 to Client's Compliance Team (compliance@internalco.com) no later than April 1 of each calendar year ("Annual Certification Deadline"). For the initial contract year (2025), Vendor shall submit all certifications within thirty (30) calendar days of the Effective Date.
+
+3.3 Certification Scope
+Vendor's ISO/IEC 27001:2022 certification shall encompass, at minimum, the information security management systems and controls applicable to the services and deliverables provided to Client under this Agreement. A SOC 2 Type II report issued within the preceding twelve (12) months may be accepted as a substitute for the Annual Security Audit Report, at Client's sole discretion.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 4 — COMPLIANCE GAP AND CURE PROCEDURES
+
+4.1 Grace Period
+Vendor shall have a grace period of thirty (30) calendar days following the Annual Certification Deadline ("Grace Period") to submit any outstanding certifications. Certifications submitted during the Grace Period shall not be treated as a compliance breach for purposes of Section 4.2.
+
+4.2 Compliance Flag
+If Vendor fails to submit one or more required certifications by the end of the Grace Period (i.e., by May 1 of each calendar year), Client's Vendor Management Office shall raise a formal Compliance Gap Flag. Upon issuance of a Compliance Gap Flag:
+  (i)  Client's Compliance Team and Vendor's designated compliance contact shall be notified immediately;
+  (ii) Vendor shall have thirty (30) calendar days from the date of the Compliance Gap Flag ("Cure Period") to submit all outstanding certifications;
+  (iii) Vendor must provide Client with a written remediation plan within ten (10) business days of the Compliance Gap Flag notice.
+
+4.3 Certification Lapse — Escalation
+In the event that Vendor's ISO 27001 certification lapses, is suspended, or is withdrawn by the issuing certification body, Vendor shall notify Client in writing within 48 hours of receiving notice from the certification body. Such lapse constitutes a material breach. Vendor shall have sixty (60) calendar days to restore certification. Client may suspend payment of fees during any period in which Vendor's ISO 27001 certification is not in good standing.
+
+4.4 Failure to Cure
+If Vendor fails to achieve verified remediation of all identified compliance gaps within the Cure Period, Client may:
+  (i)  suspend Vendor's access to Client systems pending remediation;
+  (ii) withhold payment of fees until remediation is confirmed; and/or
+  (iii) terminate this Agreement for cause pursuant to Section 8.2, without further obligation to Vendor except for payment of amounts due for services accepted prior to the termination date.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 5 — SERVICE LEVEL AGREEMENT
+
+5.1 Uptime Commitment
+Vendor shall maintain a monthly Service Availability of not less than 99.5% for all production systems.
+
+5.2 Response Time Tiers
+  Priority | Definition                           | Initial Response | Resolution Target
+  ---------|--------------------------------------|------------------|------------------
+  P1 Critical | Full service outage or data loss  | 15 minutes       | 4 hours
+  P2 High     | Major functionality degradation   | 1 business hour  | 8 business hours
+  P3 Medium   | Partial impairment with workaround| 4 business hours | 3 business days
+  P4 Low      | General inquiry or cosmetic issue | 1 business day   | 10 business days
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 6 — DATA PRIVACY
+
+6.1 Data Processing Agreement
+The parties shall maintain a current, executed DPA covering all processing of Client Personal Data. The DPA shall comply with GDPR, CCPA, and all applicable data protection laws. Vendor shall not process Client Personal Data for any purpose other than performance of its obligations under this Agreement.
+
+6.2 Breach Notification
+Vendor shall notify Client of any confirmed data security breach within seventy-two (72) hours of discovery.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 7 — PAYMENT TERMS
+
+7.1 Net 30 Payment
+Client shall pay all undisputed invoices within thirty (30) calendar days of the invoice date.
+
+7.2 Monthly Fee
+The monthly fee for services under this Agreement is as set forth in Exhibit C (Pricing Schedule).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 8 — TERM AND TERMINATION
+
+8.1 Initial Term
+This Agreement commences on June 1, 2025 and expires on May 31, 2026.
+
+8.2 Termination for Cause
+Client may terminate this Agreement for cause upon thirty (30) days' written notice if Vendor commits a material breach and fails to cure such breach within the applicable cure period.
+
+8.3 Termination for Convenience
+Either party may terminate for convenience upon ninety (90) days' prior written notice.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Signed on behalf of InternalCo Ltd.: ___________________  Date: June 1, 2025
+Signed on behalf of TechVendor Inc.: ___________________  Date: June 1, 2025

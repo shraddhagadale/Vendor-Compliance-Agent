@@ -1,0 +1,107 @@
+MASTER SERVICE AGREEMENT
+Vendor: Acme Corp
+Client: InternalCo Ltd.
+Contract ID: MSA-2025-ACME-001
+Effective Date: January 1, 2025
+Expiration Date: December 31, 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 1 — PARTIES
+
+This Master Service Agreement ("Agreement") is entered into as of January 1, 2025 ("Effective Date") by and between InternalCo Ltd., a corporation organized under the laws of Delaware ("Client"), and Acme Corp, a corporation organized under the laws of California ("Vendor").
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 2 — SCOPE OF SERVICES
+
+Vendor shall provide monthly software platform updates, integration patches, and associated technical support services as described in Exhibit A (Delivery Schedule). Services include:
+  - Monthly software update packages (platform core and integrations)
+  - Release notes and technical documentation
+  - Post-deployment support for a period of five (5) business days per release
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 3 — DELIVERY OBLIGATIONS
+
+3.1 Monthly Delivery Schedule
+Vendor shall deliver each monthly software update package no later than the 5th calendar day of each month ("Monthly Delivery Date"). Deliverables shall be deemed accepted upon Client's written confirmation or, in the absence of written confirmation or written rejection, upon the expiration of five (5) business days following receipt. Time is of the essence with respect to all delivery obligations under this Agreement.
+
+3.2 Advance Notice Requirement
+Vendor shall provide written notice to Client's designated Contract Manager no fewer than three (3) business days prior to each Monthly Delivery Date, confirming the anticipated delivery and identifying any known impediments.
+
+3.3 Definition of Missed Delivery
+A "Missed Delivery" shall mean any instance in which:
+  (i)  the applicable Deliverable is not received by Client on or before the Monthly Delivery Date;
+  (ii) the Deliverable received materially fails to conform to the Specifications set forth in Exhibit B; or
+  (iii) Vendor fails to provide the required pre-delivery notice as specified in Section 3.2.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 4 — SERVICE LEVEL AGREEMENT
+
+4.1 Uptime Commitment
+Vendor shall maintain a monthly Service Availability of not less than 99.5% ("Uptime Commitment"), measured on a calendar-month basis. A 99.5% monthly uptime commitment permits a maximum of 219 minutes of unexcused downtime per calendar month.
+
+4.2 Response Time Tiers
+Vendor shall classify and respond to all support incidents as follows:
+
+  Priority | Definition                          | Initial Response | Resolution Target
+  ---------|-------------------------------------|------------------|------------------
+  P1 Critical | Full service outage or data loss | 15 minutes       | 4 hours
+  P2 High     | Major functionality loss          | 1 business hour  | 8 business hours
+  P3 Medium   | Partial impairment with workaround| 4 business hours | 3 business days
+  P4 Low      | Cosmetic or general inquiry       | 1 business day   | 10 business days
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 5 — PENALTY CLAUSES AND DISPUTE TRIGGERS
+
+5.1 Clause 4.2 — Delivery Failure Dispute Trigger
+In the event that Vendor incurs two (2) or more Missed Deliveries within any rolling 30-day period, Client shall have the right, exercisable upon written notice to Vendor, to initiate a formal Vendor Performance Review ("VPR") and raise a formal dispute. Upon issuance of a dispute notice, Vendor must respond within fourteen (14) calendar days with a root cause analysis and corrective action plan. Failure to respond within fourteen (14) days shall escalate the dispute to contract review proceedings under Section 5.2.
+
+5.2 Clause 5.2 — Three or More Missed Deliveries
+Upon the occurrence of three (3) or more Missed Deliveries within any rolling 30-day period, Client may, at its sole discretion, initiate a full Contract Review. The Contract Review shall assess whether to continue, amend, or terminate this Agreement.
+
+5.3 Service Credits
+Service credits shall accrue as follows:
+  - 1st Missed Delivery in any contract year: Vendor submits written root cause analysis within 5 business days.
+  - 2nd Missed Delivery within rolling 30-day period: Service credit equal to 10% of monthly contract value applied to next invoice, plus formal dispute initiated under Clause 4.2.
+  - 3rd or subsequent Missed Delivery within rolling 30-day period: Service credit equal to 25% of monthly contract value; Contract Review initiated under Clause 5.2.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 6 — PAYMENT TERMS
+
+6.1 Net 30 Payment
+Client shall pay all undisputed invoices within thirty (30) calendar days of the invoice date. Invoices shall be submitted by Vendor no later than the 1st business day of each month for the preceding month's services.
+
+6.2 Late Payment
+Any amounts not paid by Client by the applicable Payment Due Date shall accrue interest at 1.5% per month, calculated from the Payment Due Date until the date of actual payment.
+
+6.3 Invoice Disputes
+Either party may dispute an invoice in writing within fifteen (15) business days of receipt. Undisputed portions of any invoice remain due and payable under standard payment terms.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 7 — CONTRACT TERM AND RENEWAL
+
+7.1 Initial Term
+This Agreement commences on January 1, 2025 and expires on December 31, 2026 ("Expiration Date").
+
+7.2 Renewal
+This Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal no fewer than sixty (60) calendar days prior to the expiration of the then-current term.
+
+7.3 Wind-Down Obligations
+Upon expiration or termination, Vendor shall provide Client with a final data export within fifteen (15) business days and cooperate with Client's transition to a replacement vendor for up to ninety (90) days.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 8 — COMPLIANCE
+
+Vendor shall maintain valid ISO/IEC 27001:2022 certification and a current Data Processing Agreement with Client at all times during the term. Annual security audit results must be submitted to Client's compliance team within 30 days of completion.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Signed on behalf of InternalCo Ltd.: ___________________  Date: January 1, 2025
+Signed on behalf of Acme Corp:       ___________________  Date: January 1, 2025

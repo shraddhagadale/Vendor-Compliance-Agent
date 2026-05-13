@@ -1,0 +1,133 @@
+INTERNALCO LTD. — VENDOR ESCALATION POLICY
+Document ID: POL-VMO-ESC-002
+Version: 1.4
+Effective Date: January 1, 2025
+Owner: Vendor Management Office (VMO)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. PURPOSE
+
+This policy defines the mandatory escalation ladder that InternalCo Ltd. ("Company") shall follow when a vendor misses deliveries, violates SLA commitments, or fails to meet contractual obligations. Each escalation tier has specific triggers, required actions, and time limits.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. ESCALATION TIERS OVERVIEW
+
+  Tier | Trigger                                      | Action                    | Time Limit
+  -----|----------------------------------------------|---------------------------|-------------
+  1    | 1 Missed Delivery in rolling 30-day period   | Send formal warning       | Within 24 hours
+  2    | 2 Missed Deliveries in rolling 30-day period | Raise formal dispute      | Within 48 hours
+  3    | 3+ Missed Deliveries in rolling 30-day period| Initiate Contract Review  | Within 5 business days
+  4    | Dispute unresolved after 14 days             | Escalate to legal/exec    | Immediately at day 14
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. TIER 1 — FIRST MISSED DELIVERY: FORMAL WARNING
+
+3.1 Trigger
+Tier 1 is triggered immediately upon confirmation that a vendor has incurred one (1) Missed Delivery within any rolling 30-day period.
+
+3.2 Required Action — Warning Notice
+The Vendor Management Office (VMO) shall send a formal written warning notice to the vendor's designated Contract Manager and Account Executive within twenty-four (24) hours of the confirmed Missed Delivery. The warning notice shall:
+  (a) Identify the specific Missed Delivery (date, deliverable, contract reference);
+  (b) Cite the applicable contract clause (e.g., Section 3.1 or Clause 4.2);
+  (c) Request a written Root Cause Analysis (RCA) within ten (10) business days;
+  (d) Advise the vendor that a second Missed Delivery within the same rolling 30-day period will trigger a formal dispute.
+
+3.3 Vendor Response Requirement
+Vendor must respond in writing with an RCA and corrective action plan within ten (10) business days of the warning notice. Failure to respond within this period shall itself be treated as a Tier 2 escalation trigger.
+
+3.4 Logging
+All Tier 1 events shall be logged in the Company's Vendor Performance Log maintained by the VMO.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. TIER 2 — TWO MISSED DELIVERIES: FORMAL DISPUTE
+
+4.1 Trigger
+Tier 2 is triggered when a vendor incurs two (2) or more Missed Deliveries within any rolling 30-day period. This threshold corresponds directly to the dispute trigger clause (Clause 4.2) in the vendor's Master Service Agreement.
+
+4.2 Required Action — Raise Formal Dispute
+The VMO shall raise a formal dispute against the vendor within forty-eight (48) hours of confirming the second Missed Delivery. The dispute shall be filed in the Company's Vendor Dispute Management System and shall include:
+  (a) Dispute reference number and timestamp;
+  (b) Vendor name and contract ID;
+  (c) Description of each Missed Delivery (dates, deliverables);
+  (d) Applicable contract clause reference (e.g., Clause 4.2);
+  (e) Requested remedy (RCA, corrective action plan, and/or service credits).
+
+4.3 Dispute Resolution Process
+Upon filing of a formal dispute:
+  (i)  Each party's designated Dispute Resolution Representative must acknowledge receipt within five (5) business days;
+  (ii) An initial resolution conference must be held within fifteen (15) business days of the dispute filing date;
+  (iii) Vendor must submit a corrective action plan within fourteen (14) calendar days of the dispute filing date.
+
+4.4 Dispute Resolution Deadline
+Disputes must be resolved within fourteen (14) calendar days of the filing date. If a dispute remains open and unresolved after fourteen (14) calendar days, the escalation automatically advances to Tier 4 (Legal/Executive Escalation).
+
+4.5 Service Credits
+A service credit equal to 10% of the monthly contract value shall be applied to the next invoice upon formal dispute filing, in addition to any credits accrued under the SLA policy.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. TIER 3 — THREE OR MORE MISSED DELIVERIES: CONTRACT REVIEW
+
+5.1 Trigger
+Tier 3 is triggered when a vendor incurs three (3) or more Missed Deliveries within any rolling 30-day period.
+
+5.2 Required Action — Initiate Contract Review
+The VMO shall initiate a Formal Contract Review (FCR) within five (5) business days of confirming the third Missed Delivery. The FCR process includes:
+  (a) A comprehensive review of the vendor's performance data for the trailing 12-month period;
+  (b) An on-site or virtual audit of the vendor's service delivery operations at Company's election;
+  (c) Renegotiation of applicable SLAs, delivery terms, and penalty structures;
+  (d) Assessment of whether to continue, amend, or terminate the agreement.
+
+5.3 Performance Improvement Plan (PIP)
+Vendors subject to a Tier 3 escalation shall be placed on a formal Performance Improvement Plan (PIP) for a minimum of ninety (90) calendar days. During the PIP period:
+  - Vendor performance shall be reviewed bi-weekly by the VMO;
+  - Vendor must meet 100% of scheduled deliveries for three consecutive months to be removed from PIP status;
+  - A service credit equal to 25% of monthly contract value shall be applied for each subsequent month of the PIP period in which a Missed Delivery occurs.
+
+5.4 Concurrent Dispute
+A Tier 3 trigger does not supersede any active Tier 2 dispute. Both the dispute and the Contract Review shall proceed concurrently.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. TIER 4 — UNRESOLVED DISPUTE: LEGAL AND EXECUTIVE ESCALATION
+
+6.1 Trigger
+Tier 4 is triggered automatically when:
+  (a) A Tier 2 dispute remains unresolved after fourteen (14) calendar days from the dispute filing date; OR
+  (b) A vendor fails to participate in the dispute resolution process in good faith; OR
+  (c) A vendor fails to submit a corrective action plan within the timeframes specified in Tier 2 or Tier 3.
+
+6.2 Required Actions
+Upon Tier 4 trigger:
+  (i)  The VMO shall notify Company's General Counsel and the relevant business unit's Vice President within one (1) business day;
+  (ii) A formal Cure Notice shall be issued to the vendor pursuant to the applicable contract termination clause, providing thirty (30) calendar days to fully remediate all identified breaches;
+  (iii) Company reserves the right to pursue formal legal remedies including specific performance, compensatory damages, and termination for cause if the Cure Period expires without full remediation.
+
+6.3 Termination for Cause
+If the vendor fails to cure all identified breaches within the Cure Period, Company may terminate the agreement for cause, effective immediately upon written notice, without further obligation except for payment of amounts due for conforming deliverables accepted prior to the termination date.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. APPLICABILITY TO SLA BREACHES
+
+The same escalation ladder applies to repeated SLA breaches (uptime failures, response time violations) as defined in POL-VMO-SLA-001 (Vendor SLA Policy), with the following mapping:
+  - 1st SLA breach in 6-month period → Tier 1 (Warning)
+  - 2nd SLA breach in 6-month period → Tier 2 (Formal Dispute)
+  - 3rd SLA breach (Chronic Breach)  → Tier 3 (Contract Review)
+  - Unresolved after 14 days         → Tier 4 (Legal/Executive)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. RECORD KEEPING
+
+All escalation actions, notices, vendor responses, and resolution outcomes must be documented in the Vendor Performance Log within twenty-four (24) hours of each event. The VMO is responsible for maintaining complete and accurate escalation records.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Last reviewed: January 1, 2025
+Next review due: January 1, 2026
+Policy Owner: Head of Vendor Management, InternalCo Ltd.
