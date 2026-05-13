@@ -50,8 +50,6 @@ def _split(docs: list[Document]) -> list[Document]:
       3. Sentence endings  (". ")
       4. Characters        (last resort)
 
-    This keeps clauses and sentences intact instead of cutting mid-thought.
-
     chunk_size=600   — large enough for a full legal clause to fit in one chunk
     chunk_overlap=75 — ensures a clause that straddles a boundary isn't lost;
                        the tail of chunk N becomes the head of chunk N+1
