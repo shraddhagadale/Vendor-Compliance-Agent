@@ -26,30 +26,49 @@ Steps:
     minutes (approximately 3 hours and 39 minutes).
 
     [Source: escalation_policy.txt]
-    5.3 Performance Improvement Plan (PIP)
-    Vendors subject to a Tier 3 escalation shall be placed on a formal Performance
-    Improvement Plan (PIP) for a minimum of ninety (90) calendar days. During the
-    PIP period:
-      - Vendor performance shall be reviewed bi-weekly by the VMO;
-      - Vendor must meet 100% of scheduled deliveries for three consecutive months
-        to be removed from PIP status;
+    The same escalation ladder applies to repeated SLA breaches with the following
+    mapping:
+      - 1st SLA breach in 6-month period → Tier 1 (Warning)
+      - 2nd SLA breach in 6-month period → Tier 2 (Formal Dispute)
+      - 3rd SLA breach (Chronic Breach)  → Tier 3 (Contract Review)
 
 Answer:
-  According to our SLA, the uptime commitment is a minimum of 99.5% per calendar
-  month, allowing up to 219 minutes of unexcused downtime. If this threshold is
-  breached, the vendor will be placed on a Performance Improvement Plan (PIP) for
-  at least 90 days, during which their performance will be reviewed bi-weekly and
-  they must meet all scheduled deliveries for three consecutive months to avoid
-  continued PIP status.
+  According to our SLA, the Vendor is required to maintain a monthly Service
+  Availability of not less than 99.5%, which allows for a maximum of 219 minutes
+  of unexcused downtime per calendar month. If this uptime commitment is breached,
+  the vendor will be subject to an escalation process as defined in the Escalation
+  Policy.
 
 
 ================================================================================
-Q2 — Tool only: Live vendor data lookup
-Query: "Get me Acme Corp current performance stats"
+Q2 — Multi-step (RAG + Tool): Cross-source reasoning
+Query: "What does our contract say about missed deliveries, and how many has Acme Corp missed?"
 ================================================================================
 
 Steps:
+  [Tool Call] query_vendor_knowledge_base({'query': 'missed deliveries penalty clause'})
   [Tool Call] get_vendor_performance({'vendor_id': 'acme_corp'})
+
+  [Tool Result] query_vendor_knowledge_base:
+    [Source: acme_corp_contract.txt]
+    3.3 Definition of Missed Delivery
+    A "Missed Delivery" shall mean any instance in which:
+      (i)  the applicable Deliverable is not received by Client on or before the
+           Monthly Delivery Date;
+      (ii) the Deliverable received materially fails to conform to the
+           Specifications set forth in Exhibit B; or
+      (iii) Vendor fails to provide the required pre-delivery notice as specified
+            in Section 3.2.
+
+    [Source: escalation_policy.txt]
+    3. TIER 1 — FIRST MISSED DELIVERY: FORMAL WARNING
+    3.1 Trigger
+    Tier 1 is triggered immediately upon confirmation that a vendor has incurred
+    one (1) Missed Delivery within any rolling 30-day period.
+
+    [Source: escalation_policy.txt]
+    Advise the vendor that a second Missed Delivery within the same rolling 30-day
+    period will trigger a formal dispute.
 
   [Tool Result] get_vendor_performance:
     Vendor: Acme Corp (acme_corp)
@@ -65,47 +84,21 @@ Steps:
       • Annual Security Audit: submitted 2026-02-19
 
 Answer:
-  Acme Corp's performance stats for the last 30 days show that they have delivered
-  a total of 17 times, with 13 on-time deliveries and 4 missed or late deliveries.
-  Their uptime is at 97.3%, but there were 3 SLA breaches noted during this period.
-  There are currently 2 open incidents, the most recent being an unresponsive payment
-  processing service for 83 minutes on 2026-05-09.
+  Based on the contract terms and internal policies, a "Missed Delivery" is defined
+  as not receiving a Deliverable by the Monthly Delivery Date, or if it materially
+  fails to conform to Specifications, or if pre-delivery notice was not provided.
 
-  In terms of compliance, Acme Corp has a valid ISO 27001 certification that expires
-  on 2026-08-23. Their Data Privacy Agreement is also valid but will expire in about
-  4 months on 2026-10-11. They submitted their Annual Security Audit on 2026-02-19.
+  For Acme Corp over the last 30 days:
+    Scheduled: 17 | On-time: 13 | Missed: 3 | Late: 1
 
-
-================================================================================
-Q3 — RAG only: Contract lookup
-Query: "When does Acme Corp contract expire?"
-================================================================================
-
-Steps:
-  [Tool Call] query_vendor_knowledge_base({'query': 'Acme Corp contract expiry date'})
-
-  [Tool Result] query_vendor_knowledge_base:
-    [Source: acme_corp_contract.txt]
-    SECTION 7 — CONTRACT TERM AND RENEWAL
-    7.1 Initial Term
-    This Agreement commences on January 1, 2025 and expires on December 31, 2026
-    ("Expiration Date").
-
-    7.3 Wind-Down Obligations
-    Upon expiration or termination, Vendor shall provide Client with a final data
-    export within fifteen (15) business days and cooperate with Client's transition
-    to a replacement vendor for up to ninety (90) days.
-
-Answer:
-  The Acme Corp contract expires on December 31, 2026. According to the contract
-  terms, upon expiration or termination, they are required to provide a final data
-  export within fifteen business days and cooperate with our transition process for
-  up to ninety days.
+  Acme Corp has missed 3 deliveries in the past month. According to our escalation
+  policy, a formal warning is triggered after the first missed delivery, with a
+  second missed delivery triggering a formal dispute.
 
 
 ================================================================================
-Q4 — Action: Compliance gap detection and flagging
-Query: "TechVendor hasn't submitted their annual ISO certification, handle it"
+Q3 — Action: Compliance gap flagging
+Query: "TechVendor's Annual Security Audit is overdue, flag them"
 ================================================================================
 
 Steps:
@@ -113,10 +106,10 @@ Steps:
 
   [Tool Result] flag_compliance_gap:
     Compliance gap flagged successfully.
-    Flag ID              : COMP-TECHVE-202605140136
+    Flag ID              : COMP-TECHVE-202605140237
     Vendor               : techvendor
     Missing certification: Annual Security Audit
-    Timestamp            : 2026-05-14 05:36 UTC
+    Timestamp            : 2026-05-14 06:37 UTC
     Compliance team      : compliance@internalco.com (notified)
     Vendor notified      : compliance@techvendor.com
     Cure period          : 30 calendar days from today to submit the certification.
@@ -124,13 +117,13 @@ Steps:
                            be initiated.
 
 Answer:
-  The annual Security Audit certification for TechVendor has been flagged
-  successfully. Here are the details:
+  TechVendor has been flagged for the overdue Annual Security Audit. The following
+  actions have been taken:
 
-  Flag ID    : COMP-TECHVE-202605140136
+  Flag ID    : COMP-TECHVE-202605140237
   Vendor     : techvendor
   Missing    : Annual Security Audit
-  Timestamp  : 2026-05-14 05:36 UTC
+  Timestamp  : 2026-05-14 06:37 UTC
   Notified   : compliance@internalco.com + compliance@techvendor.com
   Cure period: 30 calendar days to submit the certification.
   Next steps : If unresolved after 30 days, contract suspension will be initiated.

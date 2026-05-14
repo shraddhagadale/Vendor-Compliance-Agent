@@ -35,8 +35,8 @@ docs/ (5 vendor documents)
                         │
           ┌─────────────┼─────────────┐
           ▼             ▼             ▼
-get_vendor_performance  flag_compliance_gap  send_renewal_reminder
-  [data tool]            [action tool]         [action tool]
+query_vendor_knowledge_base  get_vendor_performance  flag_compliance_gap
+  [RAG tool]                   [data tool]             [action tool]
                         │
                         ▼
                   FastAPI /query
@@ -88,12 +88,11 @@ On first run, the agent automatically embeds the 5 vendor documents into ChromaD
 
 | Query | Agent behaviour |
 |---|---|
-| `What does our SLA say about uptime requirements?` | RAG only — retrieves SLA policy |
-| `Get me Acme Corp's current performance stats` | Tool only — calls `get_vendor_performance` |
-| `When does Acme Corp's contract expire?` | RAG only — retrieves contract expiry date |
-| `TechVendor hasn't submitted their annual ISO certification, handle it` | RAG + data + action — verifies the gap, flags the correct missing cert |
+| `What does our SLA say about uptime requirements?` | RAG only — retrieves SLA policy and breach tiers |
+| `What does our contract say about missed deliveries, and how many has Acme Corp missed?` | Multi-step — calls RAG and `get_vendor_performance` in parallel, then synthesizes both |
+| `TechVendor's Annual Security Audit is overdue, flag them` | Action — agent directly flags the compliance gap |
 
-The last query is the key demo: the user mentions "ISO certification" but the agent correctly identifies from live data that the Annual Security Audit is the actual missing cert and flags that instead.
+The second query demonstrates multi-step reasoning: the agent autonomously fires both a document lookup and a live data fetch in parallel, then combines the results to answer. The third query shows direct action routing — the user provided the context, the agent executed immediately.
 
 ---
 
