@@ -50,8 +50,8 @@ def _split(docs: list[Document]) -> list[Document]:
       3. Sentence endings  (". ")
       4. Characters        (last resort)
 
-    chunk_size=600   — large enough for a full legal clause to fit in one chunk
-    chunk_overlap=75 — ensures a clause that straddles a boundary isn't lost;
+    chunk_size=400   — keeps chunks focused on a single clause or policy item
+    chunk_overlap=50 — ensures a clause that straddles a boundary isn't lost;
                        the tail of chunk N becomes the head of chunk N+1
     """
     splitter = RecursiveCharacterTextSplitter(
@@ -109,7 +109,7 @@ def _get_vectorstore() -> Chroma:
 
 def get_retriever():
     """Return a LangChain retriever that fetches the top-3 most relevant chunks."""
-    return _get_vectorstore().as_retriever(search_kwargs={"k": 3})
+    return _get_vectorstore().as_retriever(search_kwargs={"k": 4})
 
 
 # ── LangChain Tool ────────────────────────────────────────────────────────────
@@ -128,8 +128,8 @@ def query_vendor_knowledge_base(query: str) -> str:
     Input: a natural language question or keyword phrase describing what you need.
     Output: the most relevant excerpts from internal documents, each prefixed with its source filename.
 
-    Always call this tool BEFORE taking any action — never guess contract terms or policy thresholds.
-    """
+    Never guess contract terms or policy thresholds — always use this tool to retrieve them.
+"""
     try:
         retriever = get_retriever()
         results = retriever.invoke(query)
