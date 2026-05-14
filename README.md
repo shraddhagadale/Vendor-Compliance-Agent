@@ -4,7 +4,7 @@ A fully-local AI agent for vendor and supplier management. Given a natural langu
 
 ---
 
-## Stack & Justification
+## Stack
 
 **LangGraph (ReAct agent)**
 The ReAct pattern was chosen specifically for its reasoning-then-acting loop. The agent observes the query, decides which tools to call, processes the results, and decides whether to act — all autonomously. LangGraph's `create_react_agent` compiles this loop as a stateful graph, making tool chaining and multi-step reasoning first-class citizens rather than something bolted on.
