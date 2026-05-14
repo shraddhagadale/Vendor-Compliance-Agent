@@ -26,18 +26,23 @@ Steps:
     minutes (approximately 3 hours and 39 minutes).
 
     [Source: escalation_policy.txt]
-    The same escalation ladder applies to repeated SLA breaches with the following
-    mapping:
-      - 1st SLA breach in 6-month period → Tier 1 (Warning)
-      - 2nd SLA breach in 6-month period → Tier 2 (Formal Dispute)
-      - 3rd SLA breach (Chronic Breach)  → Tier 3 (Contract Review)
+    5.3 Performance Improvement Plan (PIP)
+    Vendors subject to a Tier 3 escalation shall be placed on a formal Performance
+    Improvement Plan (PIP) for a minimum of ninety (90) calendar days. During the
+    PIP period:
+      - Vendor performance shall be reviewed bi-weekly by the VMO;
+      - Vendor must meet 100% of scheduled deliveries for three consecutive months
+        to be removed from PIP status;
 
 Answer:
-  According to our SLA, the Vendor is required to maintain a monthly Service
-  Availability of not less than 99.5%, which allows for a maximum of 219 minutes
-  of unexcused downtime per calendar month. If this uptime commitment is breached,
-  the vendor will be subject to an escalation process as defined in the Escalation
-  Policy.
+  According to our SLA, the uptime commitment is a minimum of 99.5% on a
+  calendar-month basis, allowing up to 219 minutes of unexcused downtime per
+  month. If this threshold is breached, vendors may be placed on a Performance
+  Improvement Plan (PIP) for at least 90 days, during which they must meet all
+  scheduled deliveries for three consecutive months to avoid further penalties.
+
+  The SLA also outlines that vendors subject to Tier 3 escalations will be placed
+  on a PIP and their performance will be reviewed bi-weekly by the VMO.
 
 
 ================================================================================
@@ -66,10 +71,6 @@ Steps:
     Tier 1 is triggered immediately upon confirmation that a vendor has incurred
     one (1) Missed Delivery within any rolling 30-day period.
 
-    [Source: escalation_policy.txt]
-    Advise the vendor that a second Missed Delivery within the same rolling 30-day
-    period will trigger a formal dispute.
-
   [Tool Result] get_vendor_performance:
     Vendor: Acme Corp (acme_corp)
     Period: last 30 days
@@ -84,16 +85,18 @@ Steps:
       • Annual Security Audit: submitted 2026-02-19
 
 Answer:
-  Based on the contract terms and internal policies, a "Missed Delivery" is defined
-  as not receiving a Deliverable by the Monthly Delivery Date, or if it materially
-  fails to conform to Specifications, or if pre-delivery notice was not provided.
+  Based on the contract terms, a "Missed Delivery" is defined as any instance
+  where the Deliverable is not received by the Monthly Delivery Date, materially
+  fails to conform to Specifications, or pre-delivery notice was not provided.
+
+  According to our escalation policy, a Tier 1 Formal Warning is triggered
+  immediately upon the first missed delivery within a rolling 30-day period.
 
   For Acme Corp over the last 30 days:
     Scheduled: 17 | On-time: 13 | Missed: 3 | Late: 1
 
-  Acme Corp has missed 3 deliveries in the past month. According to our escalation
-  policy, a formal warning is triggered after the first missed delivery, with a
-  second missed delivery triggering a formal dispute.
+  Acme Corp has missed 3 deliveries in the past month, which triggers a Tier 1
+  escalation according to our policy.
 
 
 ================================================================================
@@ -106,10 +109,10 @@ Steps:
 
   [Tool Result] flag_compliance_gap:
     Compliance gap flagged successfully.
-    Flag ID              : COMP-TECHVE-202605140237
+    Flag ID              : COMP-TECHVE-202605141605
     Vendor               : techvendor
     Missing certification: Annual Security Audit
-    Timestamp            : 2026-05-14 06:37 UTC
+    Timestamp            : 2026-05-14 20:05 UTC
     Compliance team      : compliance@internalco.com (notified)
     Vendor notified      : compliance@techvendor.com
     Cure period          : 30 calendar days from today to submit the certification.
@@ -120,10 +123,10 @@ Answer:
   TechVendor has been flagged for the overdue Annual Security Audit. The following
   actions have been taken:
 
-  Flag ID    : COMP-TECHVE-202605140237
+  Flag ID    : COMP-TECHVE-202605141605
   Vendor     : techvendor
   Missing    : Annual Security Audit
-  Timestamp  : 2026-05-14 06:37 UTC
+  Timestamp  : 2026-05-14 20:05 UTC
   Notified   : compliance@internalco.com + compliance@techvendor.com
   Cure period: 30 calendar days to submit the certification.
   Next steps : If unresolved after 30 days, contract suspension will be initiated.
