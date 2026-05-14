@@ -109,7 +109,7 @@ def _get_vectorstore() -> Chroma:
 
 def get_retriever():
     """Return a LangChain retriever that fetches the top-3 most relevant chunks."""
-    return _get_vectorstore().as_retriever(search_kwargs={"k": 4})
+    return _get_vectorstore().as_retriever(search_kwargs={"k": 3})
 
 
 # ── LangChain Tool ────────────────────────────────────────────────────────────
