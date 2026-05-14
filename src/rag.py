@@ -55,8 +55,8 @@ def _split(docs: list[Document]) -> list[Document]:
                        the tail of chunk N becomes the head of chunk N+1
     """
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=600,
-        chunk_overlap=75,
+        chunk_size=400,
+        chunk_overlap=50,
     )
     return splitter.split_documents(docs)
 
