@@ -46,6 +46,7 @@ class QueryRequest(BaseModel):
 
 class QueryResponse(BaseModel):
     answer: str
+    steps: list[str] = []
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────

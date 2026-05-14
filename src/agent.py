@@ -74,5 +74,14 @@ def run_agent(query: str) -> dict:
     agent = get_agent()
     result = agent.invoke({"messages": [HumanMessage(content=query)]})
     messages = result.get("messages", [])
+
+    steps = []
+    for msg in messages:
+        if hasattr(msg, "tool_calls") and msg.tool_calls:
+            for tc in msg.tool_calls:
+                steps.append(f"[Tool Call] {tc['name']}({tc['args']})")
+        elif msg.__class__.__name__ == "ToolMessage":
+            steps.append(f"[Tool Result] {msg.name}: {msg.content}")
+
     answer = messages[-1].content if messages else "No response generated."
-    return {"answer": answer}
+    return {"answer": answer, "steps": steps}
