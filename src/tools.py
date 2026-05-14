@@ -23,20 +23,6 @@ class GetVendorPerformanceInput(BaseModel):
 
 
 
-class SendRenewalReminderInput(BaseModel):
-    vendor_id: str = Field(
-        description=(
-            'The unique vendor identifier (lowercase, underscores). '
-            'Valid values: "acme_corp" or "techvendor".'
-        )
-    )
-    days_until_expiry: int = Field(
-        description=(
-            'Number of days remaining until the vendor contract expires. '
-            'Example: 233 if the contract expires in about 8 months.'
-        )
-    )
-
 
 class FlagComplianceGapInput(BaseModel):
     vendor_id: str = Field(
@@ -147,27 +133,6 @@ def get_vendor_performance(vendor_id: str) -> str:
         return f"[TOOL ERROR] get_vendor_performance failed: {e}"
 
 
-
-@tool(args_schema=SendRenewalReminderInput)
-def send_renewal_reminder(vendor_id: str, days_until_expiry: int) -> str:
-    """Send a contract renewal reminder to a vendor whose contract is approaching expiry.
-    Use this ONLY when the contract expiry date is within 365 days and a reminder is warranted."""
-    try:
-        ts = _utc_now()
-        vendor_email = f"contracts@{vendor_id.replace('_', '')}.com"
-
-        return "\n".join([
-            "Renewal reminder sent successfully.",
-            f"  Vendor           : {vendor_id}",
-            f"  Days until expiry: {days_until_expiry}",
-            f"  Recipients       : {vendor_email}, procurement@internalco.com",
-            f"  Timestamp        : {ts}",
-            f"  Next steps       : Vendor must acknowledge within 30 days.",
-            f"                     Auto-escalation to legal if no response received.",
-        ])
-
-    except Exception as e:
-        return f"[TOOL ERROR] send_renewal_reminder failed: {e}"
 
 
 @tool(args_schema=FlagComplianceGapInput)
