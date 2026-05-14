@@ -22,26 +22,6 @@ class GetVendorPerformanceInput(BaseModel):
     )
 
 
-class RaiseDisputeInput(BaseModel):
-    vendor_id: str = Field(
-        description=(
-            'The unique vendor identifier (lowercase, underscores). '
-            'Valid values: "acme_corp" or "techvendor".'
-        )
-    )
-    clause_ref: str = Field(
-        description=(
-            'The contract clause being violated. '
-            'Example: "clause_4.2" for a delivery dispute, "section_3.1" for SLA breach.'
-        )
-    )
-    reason: str = Field(
-        description=(
-            'A concise description of the violation. '
-            'Example: "3 missed deliveries in a rolling 30-day period".'
-        )
-    )
-
 
 class SendRenewalReminderInput(BaseModel):
     vendor_id: str = Field(
@@ -95,29 +75,43 @@ def get_vendor_performance(vendor_id: str) -> str:
         "acme_corp": {
             "name": "Acme Corp",
             "period": "last 30 days",
-            "deliveries": {"scheduled": 4, "on_time": 1, "missed": 3, "late": 0},
-            "uptime_pct": 97.2,
+            "deliveries": {"scheduled": 5, "on_time": 2, "missed": 2, "late": 1},
+            "uptime_pct": 98.1,
             "sla_breaches": 1,
-            "open_incidents": 2,
-            "last_incident": "2026-05-05 — API timeout causing 3-hour outage",
+            "open_incidents": 1,
+            "last_incident": "2026-05-08 — intermittent API failures over 2-hour window",
             "compliance": {
                 "ISO 27001": "valid — expires 2026-11-30",
                 "Data Privacy Agreement": "valid — expires 2027-01-01",
-                "Annual Security Audit": "submitted 2025-12-10",
+                "Annual Security Audit": "submitted 2026-01-20",
             },
         },
         "techvendor": {
             "name": "TechVendor Inc.",
             "period": "last 30 days",
-            "deliveries": {"scheduled": 6, "on_time": 6, "missed": 0, "late": 0},
-            "uptime_pct": 99.8,
+            "deliveries": {"scheduled": 4, "on_time": 4, "missed": 0, "late": 0},
+            "uptime_pct": 99.9,
             "sla_breaches": 0,
             "open_incidents": 0,
             "last_incident": "None",
             "compliance": {
-                "ISO 27001": "MISSING — annual renewal overdue since 2026-04-01",
+                "ISO 27001": "valid — expires 2026-12-01",
                 "Data Privacy Agreement": "valid — expires 2026-12-31",
-                "Annual Security Audit": "submitted 2025-11-15",
+                "Annual Security Audit": "MISSING — due 2026-04-01, not submitted",
+            },
+        },
+        "meridian_soft": {
+            "name": "Meridian Software Ltd.",
+            "period": "last 30 days",
+            "deliveries": {"scheduled": 3, "on_time": 3, "missed": 0, "late": 0},
+            "uptime_pct": 99.7,
+            "sla_breaches": 0,
+            "open_incidents": 0,
+            "last_incident": "None",
+            "compliance": {
+                "ISO 27001": "valid — expires 2027-02-28",
+                "Data Privacy Agreement": "valid — expires 2027-03-31",
+                "Annual Security Audit": "submitted 2026-02-10",
             },
         },
     }
@@ -152,29 +146,6 @@ def get_vendor_performance(vendor_id: str) -> str:
     except Exception as e:
         return f"[TOOL ERROR] get_vendor_performance failed: {e}"
 
-
-@tool(args_schema=RaiseDisputeInput)
-def raise_dispute(vendor_id: str, clause_ref: str, reason: str) -> str:
-    """Formally raise a contractual dispute against a vendor for an SLA or delivery violation.
-    Use this ONLY after confirming the violation via query_vendor_knowledge_base and get_vendor_performance — never raise a dispute without first verifying the facts."""
-    try:
-        dispute_id = _short_id("DISP", vendor_id)
-        ts = _utc_now()
-
-        return "\n".join([
-            "Dispute raised successfully.",
-            f"  Dispute ID   : {dispute_id}",
-            f"  Vendor       : {vendor_id}",
-            f"  Clause       : {clause_ref}",
-            f"  Reason       : {reason}",
-            f"  Timestamp    : {ts}",
-            f"  Status       : OPEN",
-            f"  Next steps   : Vendor has 14 calendar days to respond with a root cause analysis.",
-            f"                 If unresolved after 14 days, escalation to legal will be triggered automatically.",
-        ])
-
-    except Exception as e:
-        return f"[TOOL ERROR] raise_dispute failed: {e}"
 
 
 @tool(args_schema=SendRenewalReminderInput)
