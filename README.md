@@ -33,8 +33,8 @@ docs/ (5 vendor documents)
                         ▼
               LangGraph ReAct Agent (qwen2.5:7b)
                         │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
+          ┌───────────────────────────┼─────────────────────┐
+          ▼                           ▼                     ▼
 query_vendor_knowledge_base  get_vendor_performance  flag_compliance_gap
   [RAG tool]                   [data tool]             [action tool]
                         │
